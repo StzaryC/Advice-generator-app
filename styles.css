@@ -1,0 +1,102 @@
+/* COLOR PALLET */
+:root {
+    /* Primary */
+    
+    --Light_Cyan: hsl(193, 38%, 86%);
+    --Neon_Green: hsl(150, 100%, 66%);
+    
+    /* Neutral */
+    
+    --Grayish_Blue: hsl(217, 19%, 38%);
+    --Dark_Grayish_Blue: hsl(217, 19%, 24%);
+    --Dark_Blue: hsl(218, 23%, 16%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+body {
+    background: var(--Dark_Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+}
+
+.card {
+    background: var(--Dark_Grayish_Blue);
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 30px 20px;
+    border-radius: 1em;
+    position: relative;
+}
+
+#advice {
+    color: var(--Neon_Green);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#random_text {
+    color: var(--Light_Cyan);
+    text-align: center;
+}
+
+#pattern {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#advice {
+    height: 20px;
+    text-align: center;
+}
+
+.card :nth-child(1){
+    display: flex;
+    align-items: center;
+}
+
+.card :nth-child(4) {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background: var(--Neon_Green);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -25px;
+    transition: .1s;
+}
+
+.card :nth-child(4):hover {
+    cursor: pointer;
+    box-shadow: -1px 4px 30px 5px var(--Neon_Green);
+    transition: .1s;
+}
+
+.card :nth-child(4):active{
+    transform: rotate(365deg);
+    box-shadow: none;
+}
+
+.attribution {
+    color: hsl(193, 38%, 86%);
+}
+
+.attribution a {
+    color: var(--Neon_Green);
+}
+
+@media (max-width: 530px){
+    .card {
+        width: 80vw;
+    }
+}
